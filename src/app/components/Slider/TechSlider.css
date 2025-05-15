@@ -1,0 +1,50 @@
+.slider-container {
+    position: relative;
+    overflow: hidden;
+    white-space: nowrap;
+    padding: 30px 0;
+    background-color: #0a0c14;
+}
+
+.slider-track {
+    display: inline-block;
+    animation: scroll 20s linear infinite;
+}
+
+.paused .slider-track {
+    animation-play-state: paused;
+}
+
+.logo-wrapper {
+    display: inline-block;
+    margin: 0 40px;
+    filter: grayscale(100%) brightness(0.8);
+    vertical-align: middle;
+}
+
+@keyframes scroll {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+.play-pause {
+    position: absolute;
+    right: 20px;
+    top: 50%;
+    transform: translateY(-50%);
+    background: #4a4e69;
+    color: white;
+    border: none;
+    padding: 10px;
+    border-radius: 50%;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.play-pause:hover {
+    background: #6c70a0;
+}
