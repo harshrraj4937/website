@@ -128,7 +128,7 @@ export default function Home() {
             className="max-w-6xl mx-auto bg-[#161b22] border border-[#30363d] rounded-xl shadow-[0_8px_30px_rgba(0,0,0,0.6)] p-4"
           >
             <iframe
-              src="https://terminal-zr4l.onrender.com/"
+              src="https://terminal-aw3z.onrender.com/"
               width="800px"
               height="1200px"
               className="w-full h-[400px] rounded-lg border border-[#21262d] shadow-inner"
