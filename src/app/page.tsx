@@ -144,12 +144,13 @@ export default function Home() {
           }}
         >
           <div className="relative rounded-xl border border-[#bfc0ff33] shadow-[0_0_20px_#bfc0ff33] p-6 max-w-[720px] w-full" style={{ backdropFilter: 'blur(10px)' }}>
-            <img
+            <Image
               src="/hello-rides-project-card.png"
               alt="Dark themed graph chart"
               className="rounded-lg shadow-lg"
               width={600}
               height={280}
+            // priority // optional: for above-the-fold images
             />
 
             <div
@@ -178,7 +179,7 @@ export default function Home() {
                 </div>
                 <pre className="overflow-x-auto rounded-md bg-[#161b22] p-2">
                   <code>
-                    <span className="text-[#8b949e]">// City Routes</span>
+                    <span className="text-[#8b949e]">{'//'} City Routes</span>
                     <br />
                     <span className="text-[#8affbf]">cityRepo := &amp;citycontroller.CityCrud&#123;DB: db&#125;</span>
                     <br />
@@ -187,12 +188,12 @@ export default function Home() {
                     <span className="text-[#8affbf]">cityHandler := &amp;citycontroller.CityHandler&#123;Service: cityService&#125;</span>
                     <br />
                     <br />
-                    <span className="text-[#8b949e]">// Initialize Gin Server</span>
+                    <span className="text-[#8b949e]">{'//'} Initialize Gin Server</span>
                     <br />
                     <span className="text-[#8affbf]">s := server.NewServer()</span>
                     <br />
                     <br />
-                    <span className="text-[#8b949e]">// Register Routes</span>
+                    <span className="text-[#8b949e]">{'//'} Register Routes</span>
                     <br />
                     <span className="text-[#8affbf]">authcontroller.RegisterAuthRoutes(s.Engine, authHandler)</span>
                     <br />
