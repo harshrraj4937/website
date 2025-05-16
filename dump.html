@@ -1,189 +1,230 @@
 <html lang="en">
- <head>
-  <meta charset="utf-8"/>
-  <meta content="width=device-width, initial-scale=1" name="viewport"/>
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1" name="viewport" />
   <title>
-   GitHub Copilot Section
+    GitHub Copilot Section
   </title>
   <script src="https://cdn.tailwindcss.com">
   </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet"/>
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet" />
   <style>
-   body {
+    body {
       font-family: 'Inter', sans-serif;
     }
   </style>
- </head>
- <body class="bg-[#0d1117] text-white">
+</head>
+
+<body class="bg-[#0d1117] text-white">
   <!-- Top nav placeholder (not visible in screenshot but implied) -->
   <nav class="bg-[#0d1117] border-b border-[#30363d]">
-   <div class="max-w-[1280px] mx-auto px-4 py-2 flex items-center space-x-4 text-xs text-white">
-    <div class="flex items-center space-x-4">
-     <a class="flex items-center space-x-1" href="#">
-      <img alt="GitHub logo black and white" class="w-4 h-4" height="16" src="https://storage.googleapis.com/a1aa/image/da783552-4884-4375-8a24-0c63e0f4bbe1.jpg" width="16"/>
-      <span>
-       Product
-      </span>
-      <i class="fas fa-caret-down text-[10px]">
-      </i>
-     </a>
-     <a class="flex items-center space-x-1" href="#">
-      <span>
-       Solutions
-      </span>
-      <i class="fas fa-caret-down text-[10px]">
-      </i>
-     </a>
-     <a class="flex items-center space-x-1" href="#">
-      <span>
-       Resources
-      </span>
-      <i class="fas fa-caret-down text-[10px]">
-      </i>
-     </a>
-     <a class="flex items-center space-x-1" href="#">
-      <span>
-       Open Source
-      </span>
-     </a>
-     <a class="flex items-center space-x-1" href="#">
-      <span>
-       Enterprise
-      </span>
-      <i class="fas fa-caret-down text-[10px]">
-      </i>
-     </a>
-     <a class="flex items-center space-x-1" href="#">
-      <span>
-       Pricing
-      </span>
-     </a>
+    <div class="max-w-[1280px] mx-auto px-4 py-2 flex items-center space-x-4 text-xs text-white">
+      <div class="flex items-center space-x-4">
+        <a class="flex items-center space-x-1" href="#">
+          <img alt="GitHub logo black and white" class="w-4 h-4" height="16"
+            src="https://storage.googleapis.com/a1aa/image/da783552-4884-4375-8a24-0c63e0f4bbe1.jpg" width="16" />
+          <span>
+            Product
+          </span>
+          <i class="fas fa-caret-down text-[10px]">
+          </i>
+        </a>
+        <a class="flex items-center space-x-1" href="#">
+          <span>
+            Solutions
+          </span>
+          <i class="fas fa-caret-down text-[10px]">
+          </i>
+        </a>
+        <a class="flex items-center space-x-1" href="#">
+          <span>
+            Resources
+          </span>
+          <i class="fas fa-caret-down text-[10px]">
+          </i>
+        </a>
+        <a class="flex items-center space-x-1" href="#">
+          <span>
+            Open Source
+          </span>
+        </a>
+        <a class="flex items-center space-x-1" href="#">
+          <span>
+            Enterprise
+          </span>
+          <i class="fas fa-caret-down text-[10px]">
+          </i>
+        </a>
+        <a class="flex items-center space-x-1" href="#">
+          <span>
+            Pricing
+          </span>
+        </a>
+      </div>
+      <div class="flex-grow">
+      </div>
+      <div class="flex items-center space-x-3">
+        <div class="relative text-[#8b949e] text-[11px]">
+          <input
+            class="bg-[#161b22] border border-[#30363d] rounded-md py-[3px] pl-2 pr-6 text-[11px] placeholder:text-[#8b949e] focus:outline-none focus:ring-1 focus:ring-[#58a6ff]"
+            placeholder="Search or jump to..." style="width: 140px;" type="text" />
+          <i class="fas fa-search absolute right-2 top-1/2 -translate-y-1/2 text-[#8b949e] text-[11px]">
+          </i>
+        </div>
+        <a class="text-[11px] text-white hover:underline" href="#">
+          Sign in
+        </a>
+        <button class="text-[11px] bg-[#30363d] hover:bg-[#484f58] rounded-md px-3 py-[3px] font-semibold"
+          type="button">
+          Sign up
+        </button>
+      </div>
     </div>
-    <div class="flex-grow">
-    </div>
-    <div class="flex items-center space-x-3">
-     <div class="relative text-[#8b949e] text-[11px]">
-      <input class="bg-[#161b22] border border-[#30363d] rounded-md py-[3px] pl-2 pr-6 text-[11px] placeholder:text-[#8b949e] focus:outline-none focus:ring-1 focus:ring-[#58a6ff]" placeholder="Search or jump to..." style="width: 140px;" type="text"/>
-      <i class="fas fa-search absolute right-2 top-1/2 -translate-y-1/2 text-[#8b949e] text-[11px]">
-      </i>
-     </div>
-     <a class="text-[11px] text-white hover:underline" href="#">
-      Sign in
-     </a>
-     <button class="text-[11px] bg-[#30363d] hover:bg-[#484f58] rounded-md px-3 py-[3px] font-semibold" type="button">
-      Sign up
-     </button>
-    </div>
-   </div>
   </nav>
   <!-- Main hero section with gradient and images -->
-  <section class="relative flex justify-center items-center pt-12 pb-20 px-4" style="background: linear-gradient(180deg, #1c1f2a 0%, #7f7de6 40%, #3a6a8a 80%);">
-   <div class="relative rounded-xl border border-[#bfc0ff33] shadow-[0_0_20px_#bfc0ff33] p-6 max-w-[720px] w-full" style="backdrop-filter: blur(10px);">
-    <img alt="Dark themed graph chart with severity lines in orange, red, and gray, showing data from Jan 1 to Feb 15" class="rounded-lg shadow-lg" height="280" src="https://storage.googleapis.com/a1aa/image/71b6af75-31a6-45df-1b58-4852e63c1156.jpg" width="600"/>
-    <div class="absolute top-1/2 right-[-20px] -translate-y-1/2 rounded-lg bg-[#161b22] p-4 max-w-[360px] w-full shadow-lg" style="box-shadow: 0 0 20px #000000cc;">
-     <div class="flex items-center space-x-2 mb-3 text-[11px] text-[#8b949e] font-semibold">
-      <i class="fab fa-github">
-      </i>
-      <span>
-       github-advanced-security
-      </span>
-      <span class="bg-[#6e7681] text-[#c9d1d9] rounded px-1.5 py-0.5 text-[9px] font-normal uppercase">
-       bot
-      </span>
-      <span class="ml-auto cursor-pointer">
-       ...
-      </span>
-     </div>
-     <p class="text-[11px] text-[#8b949e] mb-3 leading-tight">
-      The vulnerability in the code is due to the fact that user-provided input is directly used in HTTP response without any sanitization. This can lead to a cross-site scripting (XSS) attack if the user input contains malicious scripts.
-     </p>
-     <p class="text-[11px] text-[#8b949e] mb-3 leading-tight">
-      To fix this, we need to sanitize the input before using it in the HTTP response. One way to do this is to use the
-      <span class="font-semibold text-[#58a6ff]">
-       escape-html library
-      </span>
-      , which can escape any special characters.
-     </p>
-     <div class="bg-[#0d1117] rounded-md p-3 text-[11px] font-mono leading-snug text-[#8b949e]">
-      <div class="flex items-center space-x-2 mb-2">
-       <i class="fab fa-github">
-       </i>
-       <span class="font-semibold">
-        Copilot Autofix
-       </span>
-       <span class="bg-[#6e7681] text-[#c9d1d9] rounded px-1.5 py-0.5 text-[9px] font-normal uppercase">
-        AI
-       </span>
-      </div>
-      <pre class="overflow-x-auto rounded-md bg-[#161b22] p-2">
+  <section class="relative flex justify-center items-center pt-12 pb-20 px-4"
+    style="background: linear-gradient(180deg, #1c1f2a 0%, #7f7de6 40%, #3a6a8a 80%);">
+    <div class="relative rounded-xl border border-[#bfc0ff33] shadow-[0_0_20px_#bfc0ff33] p-6 max-w-[720px] w-full"
+      style="backdrop-filter: blur(10px);">
+      <img alt="Dark themed graph chart with severity lines in orange, red, and gray, showing data from Jan 1 to Feb 15"
+        class="rounded-lg shadow-lg" height="280"
+        src="https://storage.googleapis.com/a1aa/image/71b6af75-31a6-45df-1b58-4852e63c1156.jpg" width="600" />
+      <div
+        class="absolute top-1/2 right-[-20px] -translate-y-1/2 rounded-lg bg-[#161b22] p-4 max-w-[360px] w-full shadow-lg"
+        style="box-shadow: 0 0 20px #000000cc;">
+        <div class="flex items-center space-x-2 mb-3 text-[11px] text-[#8b949e] font-semibold">
+          <i class="fab fa-github">
+          </i>
+          <span>
+            project-title-readme
+          </span>
+          <span class="bg-[#6e7681] text-[#c9d1d9] rounded px-1.5 py-0.5 text-[9px] font-normal uppercase">
+            label
+          </span>
+          <!-- <span class="ml-auto cursor-pointer">
+            ...
+          </span> -->
+        </div>
+        <p class="text-[11px] text-[#8b949e] mb-3 leading-tight">
+          The vulnerability in the code is due to the fact that user-provided input is directly used in HTTP response
+          without any sanitization. This can lead to a cross-site scripting (XSS) attack if the user input contains
+          malicious scripts.
+        </p>
+        <p class="text-[11px] text-[#8b949e] mb-3 leading-tight">
+          To fix this, we need to sanitize the input before using it in the HTTP response. One way to do this is to use
+          the
+          <span class="font-semibold text-[#58a6ff]">
+            escape-html library
+          </span>
+          , which can escape any special characters.
+        </p>
+        <div class="bg-[#0d1117] rounded-md p-3 text-[11px] font-mono leading-snug text-[#8b949e]">
+          <div class="flex items-center space-x-2 mb-2">
+            <i class="fab fa-github">
+            </i>
+            <span class="font-semibold">
+              some code snippet
+            </span>
+            <span class="bg-[#6e7681] text-[#c9d1d9] rounded px-1.5 py-0.5 text-[9px] font-normal uppercase">
+              AI
+            </span>
+          </div>
+          <pre class="overflow-x-auto rounded-md bg-[#161b22] p-2">
 <span class="text-[#8b949e]">14</span> <span class="text-[#58a6ff]">app.get</span><span class="text-[#8b949e]">(</span><span class="text-[#d2a8ff]">'/'</span><span class="text-[#8b949e]">, (req, res) =&gt; {</span>
 <span class="bg-[#67060c] text-[#f6f8fa]">15 -  res.send('Hello ${req.query.name}!');</span>
 <span class="bg-[#023b17] text-[#8affbf]">15 +  res.send('Hello ${escape(req.query.name)}!');</span>
 <span class="text-[#8b949e]">16 });</span>
           </pre>
-     </div>
+        </div>
+      </div>
+      <button aria-label="Play"
+        class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-[#30363d] hover:bg-[#484f58] flex items-center justify-center text-[#8b949e] text-xs">
+        <i class="fas fa-play">
+        </i>
+      </button>
     </div>
-    <button aria-label="Play" class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-[#30363d] hover:bg-[#484f58] flex items-center justify-center text-[#8b949e] text-xs">
-     <i class="fas fa-play">
-     </i>
-    </button>
-   </div>
   </section>
   <!-- Toggle buttons below the hero -->
   <section class="bg-[#0d1117] py-8">
-   <div class="max-w-[720px] mx-auto px-4 flex justify-center space-x-3">
-    <button class="text-[11px] text-white border border-[#30363d] rounded-full px-5 py-1 hover:bg-[#161b22] font-semibold" type="button">
-     Code
-    </button>
-    <button class="text-[11px] text-white border border-[#30363d] rounded-full px-5 py-1 hover:bg-[#161b22] font-semibold" type="button">
-     Plan
-    </button>
-    <button class="text-[11px] text-white border border-[#30363d] rounded-full px-5 py-1 hover:bg-[#161b22] font-semibold" type="button">
-     Collaborate
-    </button>
-    <button class="text-[11px] text-white border border-[#30363d] rounded-full px-5 py-1 hover:bg-[#161b22] font-semibold" type="button">
-     Automate
-    </button>
-    <button class="text-[11px] text-white border border-[#8b949e] rounded-full px-5 py-1 bg-[#161b22] font-semibold" type="button">
-     Secure
-    </button>
-   </div>
-   <p class="text-[9px] text-[#8b949e] text-center mt-3 max-w-[720px] mx-auto px-4">
-    Leverage tooling to detect, review, and fix vulnerabilities before they reach production.
-   </p>
+    <div class="max-w-[720px] mx-auto px-4 flex justify-center space-x-3">
+      <button
+        class="text-[11px] text-white border border-[#30363d] rounded-full px-5 py-1 hover:bg-[#161b22] font-semibold"
+        type="button">
+        Code
+      </button>
+      <button
+        class="text-[11px] text-white border border-[#30363d] rounded-full px-5 py-1 hover:bg-[#161b22] font-semibold"
+        type="button">
+        Plan
+      </button>
+      <button
+        class="text-[11px] text-white border border-[#30363d] rounded-full px-5 py-1 hover:bg-[#161b22] font-semibold"
+        type="button">
+        Collaborate
+      </button>
+      <button
+        class="text-[11px] text-white border border-[#30363d] rounded-full px-5 py-1 hover:bg-[#161b22] font-semibold"
+        type="button">
+        Automate
+      </button>
+      <button class="text-[11px] text-white border border-[#8b949e] rounded-full px-5 py-1 bg-[#161b22] font-semibold"
+        type="button">
+        Secure
+      </button>
+    </div>
+    <p class="text-[9px] text-[#8b949e] text-center mt-3 max-w-[720px] mx-auto px-4">
+      Leverage tooling to detect, review, and fix vulnerabilities before they reach production.
+    </p>
   </section>
   <!-- Logos bar -->
   <section class="bg-[#0d1117] border-t border-[#161b22] py-8">
-   <div class="max-w-[1280px] mx-auto px-4 flex items-center justify-between space-x-6 overflow-x-auto scrollbar-hide">
-    <img alt="Duolingo logo in gray" class="opacity-40 flex-shrink-0" height="24" src="https://storage.googleapis.com/a1aa/image/9e206f46-fb38-4fa6-bb59-eb1cc068d3d3.jpg" width="80"/>
-    <img alt="The New York Times logo in gray" class="opacity-40 flex-shrink-0" height="24" src="https://storage.googleapis.com/a1aa/image/792ab843-d003-4aab-8f61-6fe09795f428.jpg" width="80"/>
-    <img alt="Mercado Libre logo in gray" class="opacity-40 flex-shrink-0" height="24" src="https://storage.googleapis.com/a1aa/image/6223de77-c6ff-4795-2139-e6718106c3ca.jpg" width="80"/>
-    <img alt="American Airlines logo in white" class="flex-shrink-0" height="24" src="https://storage.googleapis.com/a1aa/image/9ce91c3d-5475-4eb7-c996-c7513a0bbb81.jpg" width="80"/>
-    <img alt="Ford logo in white oval" class="flex-shrink-0" height="24" src="https://storage.googleapis.com/a1aa/image/e9913cd0-cbca-4756-4e0c-eea2f27e5a13.jpg" width="80"/>
-    <img alt="Mercedes-Benz logo in gray" class="opacity-40 flex-shrink-0" height="24" src="https://storage.googleapis.com/a1aa/image/8c922670-416a-4cee-512c-db1e61ae3b67.jpg" width="80"/>
-    <img alt="Societe Generale logo in gray" class="opacity-40 flex-shrink-0" height="24" src="https://storage.googleapis.com/a1aa/image/618e4cdf-ef4c-4202-7b88-4a88eca816e5.jpg" width="80"/>
-    <img alt="Vodafone logo in gray" class="opacity-40 flex-shrink-0" height="24" src="https://storage.googleapis.com/a1aa/image/b630f67c-d4db-437d-9777-4914c757ea6f.jpg" width="80"/>
-    <img alt="PHILIPS logo in white bold" class="flex-shrink-0 font-bold" height="24" src="https://storage.googleapis.com/a1aa/image/24e16797-ac56-4b4b-12e9-edb2e3483022.jpg" width="80"/>
-    <img alt="SAP logo in white bold" class="flex-shrink-0" height="24" src="https://storage.googleapis.com/a1aa/image/cb31a37e-8cb1-46e5-fd19-d2702036085a.jpg" width="80"/>
-    <img alt="Infosys logo in gray" class="opacity-40 flex-shrink-0" height="24" src="https://storage.googleapis.com/a1aa/image/00b1c84e-0cdd-4a33-0b64-00f4b0050918.jpg" width="80"/>
-    <img alt="Spotify logo in gray" class="opacity-40 flex-shrink-0" height="24" src="https://storage.googleapis.com/a1aa/image/5ec8d076-2c70-4932-fc0e-3e03fd5dbc21.jpg" width="80"/>
-    <div aria-label="User initials MM" class="flex-shrink-0 w-6 h-6 rounded-full bg-[#6e7681] text-[10px] font-semibold flex items-center justify-center">
-     MM
+    <div class="max-w-[1280px] mx-auto px-4 flex items-center justify-between space-x-6 overflow-x-auto scrollbar-hide">
+      <img alt="Duolingo logo in gray" class="opacity-40 flex-shrink-0" height="24"
+        src="https://storage.googleapis.com/a1aa/image/9e206f46-fb38-4fa6-bb59-eb1cc068d3d3.jpg" width="80" />
+      <img alt="The New York Times logo in gray" class="opacity-40 flex-shrink-0" height="24"
+        src="https://storage.googleapis.com/a1aa/image/792ab843-d003-4aab-8f61-6fe09795f428.jpg" width="80" />
+      <img alt="Mercado Libre logo in gray" class="opacity-40 flex-shrink-0" height="24"
+        src="https://storage.googleapis.com/a1aa/image/6223de77-c6ff-4795-2139-e6718106c3ca.jpg" width="80" />
+      <img alt="American Airlines logo in white" class="flex-shrink-0" height="24"
+        src="https://storage.googleapis.com/a1aa/image/9ce91c3d-5475-4eb7-c996-c7513a0bbb81.jpg" width="80" />
+      <img alt="Ford logo in white oval" class="flex-shrink-0" height="24"
+        src="https://storage.googleapis.com/a1aa/image/e9913cd0-cbca-4756-4e0c-eea2f27e5a13.jpg" width="80" />
+      <img alt="Mercedes-Benz logo in gray" class="opacity-40 flex-shrink-0" height="24"
+        src="https://storage.googleapis.com/a1aa/image/8c922670-416a-4cee-512c-db1e61ae3b67.jpg" width="80" />
+      <img alt="Societe Generale logo in gray" class="opacity-40 flex-shrink-0" height="24"
+        src="https://storage.googleapis.com/a1aa/image/618e4cdf-ef4c-4202-7b88-4a88eca816e5.jpg" width="80" />
+      <img alt="Vodafone logo in gray" class="opacity-40 flex-shrink-0" height="24"
+        src="https://storage.googleapis.com/a1aa/image/b630f67c-d4db-437d-9777-4914c757ea6f.jpg" width="80" />
+      <img alt="PHILIPS logo in white bold" class="flex-shrink-0 font-bold" height="24"
+        src="https://storage.googleapis.com/a1aa/image/24e16797-ac56-4b4b-12e9-edb2e3483022.jpg" width="80" />
+      <img alt="SAP logo in white bold" class="flex-shrink-0" height="24"
+        src="https://storage.googleapis.com/a1aa/image/cb31a37e-8cb1-46e5-fd19-d2702036085a.jpg" width="80" />
+      <img alt="Infosys logo in gray" class="opacity-40 flex-shrink-0" height="24"
+        src="https://storage.googleapis.com/a1aa/image/00b1c84e-0cdd-4a33-0b64-00f4b0050918.jpg" width="80" />
+      <img alt="Spotify logo in gray" class="opacity-40 flex-shrink-0" height="24"
+        src="https://storage.googleapis.com/a1aa/image/5ec8d076-2c70-4932-fc0e-3e03fd5dbc21.jpg" width="80" />
+      <div aria-label="User initials MM"
+        class="flex-shrink-0 w-6 h-6 rounded-full bg-[#6e7681] text-[10px] font-semibold flex items-center justify-center">
+        MM
+      </div>
     </div>
-   </div>
   </section>
   <!-- Bottom section with icon and text -->
   <section class="bg-[#0d1117] py-20 px-4">
-   <div class="max-w-[720px] mx-auto text-center">
-    <img alt="Purple GitHub Copilot icon with eyes and headset" class="mx-auto mb-4" height="48" src="https://storage.googleapis.com/a1aa/image/06a89efb-b215-4e3e-263b-b45d601ae157.jpg" width="48"/>
-    <h2 class="text-white text-xl font-semibold mb-2">
-     Accelerate performance
-    </h2>
-    <p class="text-[#8b949e] text-sm max-w-[480px] mx-auto leading-relaxed">
-     With GitHub Copilot embedded throughout the platform, you can simplify your toolchain, automate tasks, and improve the developer experience.
-    </p>
-   </div>
+    <div class="max-w-[720px] mx-auto text-center">
+      <img alt="Purple GitHub Copilot icon with eyes and headset" class="mx-auto mb-4" height="48"
+        src="https://storage.googleapis.com/a1aa/image/06a89efb-b215-4e3e-263b-b45d601ae157.jpg" width="48" />
+      <h2 class="text-white text-xl font-semibold mb-2">
+        Accelerate performance
+      </h2>
+      <p class="text-[#8b949e] text-sm max-w-[480px] mx-auto leading-relaxed">
+        With GitHub Copilot embedded throughout the platform, you can simplify your toolchain, automate tasks, and
+        improve the developer experience.
+      </p>
+    </div>
   </section>
- </body>
+</body>
+
 </html>
