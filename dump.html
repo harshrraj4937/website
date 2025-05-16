@@ -4,7 +4,7 @@
   <meta charset="utf-8" />
   <meta content="width=device-width, initial-scale=1" name="viewport" />
   <title>
-    GitHub Copilot Section
+    GitHub Scales
   </title>
   <script src="https://cdn.tailwindcss.com">
   </script>
@@ -17,214 +17,187 @@
   </style>
 </head>
 
-<body class="bg-[#0d1117] text-white">
-  <!-- Top nav placeholder (not visible in screenshot but implied) -->
-  <nav class="bg-[#0d1117] border-b border-[#30363d]">
-    <div class="max-w-[1280px] mx-auto px-4 py-2 flex items-center space-x-4 text-xs text-white">
-      <div class="flex items-center space-x-4">
-        <a class="flex items-center space-x-1" href="#">
-          <img alt="GitHub logo black and white" class="w-4 h-4" height="16"
-            src="https://storage.googleapis.com/a1aa/image/da783552-4884-4375-8a24-0c63e0f4bbe1.jpg" width="16" />
-          <span>
-            Product
-          </span>
-          <i class="fas fa-caret-down text-[10px]">
-          </i>
-        </a>
-        <a class="flex items-center space-x-1" href="#">
-          <span>
-            Solutions
-          </span>
-          <i class="fas fa-caret-down text-[10px]">
-          </i>
-        </a>
-        <a class="flex items-center space-x-1" href="#">
-          <span>
-            Resources
-          </span>
-          <i class="fas fa-caret-down text-[10px]">
-          </i>
-        </a>
-        <a class="flex items-center space-x-1" href="#">
-          <span>
-            Open Source
-          </span>
-        </a>
-        <a class="flex items-center space-x-1" href="#">
-          <span>
-            Enterprise
-          </span>
-          <i class="fas fa-caret-down text-[10px]">
-          </i>
-        </a>
-        <a class="flex items-center space-x-1" href="#">
-          <span>
-            Pricing
-          </span>
-        </a>
-      </div>
-      <div class="flex-grow">
-      </div>
-      <div class="flex items-center space-x-3">
-        <div class="relative text-[#8b949e] text-[11px]">
-          <input
-            class="bg-[#161b22] border border-[#30363d] rounded-md py-[3px] pl-2 pr-6 text-[11px] placeholder:text-[#8b949e] focus:outline-none focus:ring-1 focus:ring-[#58a6ff]"
-            placeholder="Search or jump to..." style="width: 140px;" type="text" />
-          <i class="fas fa-search absolute right-2 top-1/2 -translate-y-1/2 text-[#8b949e] text-[11px]">
-          </i>
-        </div>
-        <a class="text-[11px] text-white hover:underline" href="#">
-          Sign in
-        </a>
-        <button class="text-[11px] bg-[#30363d] hover:bg-[#484f58] rounded-md px-3 py-[3px] font-semibold"
-          type="button">
-          Sign up
-        </button>
-      </div>
-    </div>
-  </nav>
-  <!-- Main hero section with gradient and images -->
-  <section class="relative flex justify-center items-center pt-12 pb-20 px-4"
-    style="background: linear-gradient(180deg, #1c1f2a 0%, #7f7de6 40%, #3a6a8a 80%);">
-    <div class="relative rounded-xl border border-[#bfc0ff33] shadow-[0_0_20px_#bfc0ff33] p-6 max-w-[720px] w-full"
-      style="backdrop-filter: blur(10px);">
-      <img alt="Dark themed graph chart with severity lines in orange, red, and gray, showing data from Jan 1 to Feb 15"
-        class="rounded-lg shadow-lg" height="280"
-        src="https://storage.googleapis.com/a1aa/image/71b6af75-31a6-45df-1b58-4852e63c1156.jpg" width="600" />
-      <div
-        class="absolute top-1/2 right-[-20px] -translate-y-1/2 rounded-lg bg-[#161b22] p-4 max-w-[360px] w-full shadow-lg"
-        style="box-shadow: 0 0 20px #000000cc;">
-        <div class="flex items-center space-x-2 mb-3 text-[11px] text-[#8b949e] font-semibold">
-          <i class="fab fa-github">
-          </i>
-          <span>
-            project-title-readme
-          </span>
-          <span class="bg-[#6e7681] text-[#c9d1d9] rounded px-1.5 py-0.5 text-[9px] font-normal uppercase">
-            label
-          </span>
-          <!-- <span class="ml-auto cursor-pointer">
-            ...
-          </span> -->
-        </div>
-        <p class="text-[11px] text-[#8b949e] mb-3 leading-tight">
-          The vulnerability in the code is due to the fact that user-provided input is directly used in HTTP response
-          without any sanitization. This can lead to a cross-site scripting (XSS) attack if the user input contains
-          malicious scripts.
-        </p>
-        <p class="text-[11px] text-[#8b949e] mb-3 leading-tight">
-          To fix this, we need to sanitize the input before using it in the HTTP response. One way to do this is to use
-          the
-          <span class="font-semibold text-[#58a6ff]">
-            escape-html library
-          </span>
-          , which can escape any special characters.
-        </p>
-        <div class="bg-[#0d1117] rounded-md p-3 text-[11px] font-mono leading-snug text-[#8b949e]">
-          <div class="flex items-center space-x-2 mb-2">
-            <i class="fab fa-github">
-            </i>
-            <span class="font-semibold">
-              some code snippet
-            </span>
-            <span class="bg-[#6e7681] text-[#c9d1d9] rounded px-1.5 py-0.5 text-[9px] font-normal uppercase">
-              AI
-            </span>
-          </div>
-          <pre class="overflow-x-auto rounded-md bg-[#161b22] p-2">
-<span class="text-[#8b949e]">14</span> <span class="text-[#58a6ff]">app.get</span><span class="text-[#8b949e]">(</span><span class="text-[#d2a8ff]">'/'</span><span class="text-[#8b949e]">, (req, res) =&gt; {</span>
-<span class="bg-[#67060c] text-[#f6f8fa]">15 -  res.send('Hello ${req.query.name}!');</span>
-<span class="bg-[#023b17] text-[#8affbf]">15 +  res.send('Hello ${escape(req.query.name)}!');</span>
-<span class="text-[#8b949e]">16 });</span>
-          </pre>
-        </div>
-      </div>
-      <button aria-label="Play"
-        class="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-[#30363d] hover:bg-[#484f58] flex items-center justify-center text-[#8b949e] text-xs">
-        <i class="fas fa-play">
+<body class="bg-[#0D1117] text-white">
+  <header class="flex items-center justify-between px-4 sm:px-6 md:px-10 py-3 border-b border-[#30363d]">
+    <div class="flex items-center space-x-6">
+      <a class="text-white" href="#">
+        <i class="fab fa-github fa-lg">
         </i>
+      </a>
+      <nav class="hidden md:flex space-x-6 text-sm font-normal text-white">
+        <div class="relative group">
+          <button class="flex items-center space-x-1">
+            <span>
+              Product
+            </span>
+            <i class="fas fa-caret-down text-xs">
+            </i>
+          </button>
+        </div>
+        <div class="relative group">
+          <button class="flex items-center space-x-1">
+            <span>
+              Solutions
+            </span>
+            <i class="fas fa-caret-down text-xs">
+            </i>
+          </button>
+        </div>
+        <div class="relative group">
+          <button class="flex items-center space-x-1">
+            <span>
+              Resources
+            </span>
+            <i class="fas fa-caret-down text-xs">
+            </i>
+          </button>
+        </div>
+        <div class="relative group">
+          <button class="flex items-center space-x-1">
+            <span>
+              Open Source
+            </span>
+            <i class="fas fa-caret-down text-xs">
+            </i>
+          </button>
+        </div>
+        <div class="relative group">
+          <button class="flex items-center space-x-1">
+            <span>
+              Enterprise
+            </span>
+            <i class="fas fa-caret-down text-xs">
+            </i>
+          </button>
+        </div>
+        <a class="hover:underline" href="#">
+          Pricing
+        </a>
+      </nav>
+    </div>
+    <div class="flex items-center space-x-4">
+      <form class="hidden md:flex items-center bg-[#161b22] rounded-md px-2 py-1 text-[#8b949e] text-xs w-[220px]">
+        <i class="fas fa-search mr-2">
+        </i>
+        <input aria-label="Search or jump to" class="bg-transparent outline-none w-full placeholder:text-[#8b949e]"
+          placeholder="Search or jump to..." type="search" />
+        <kbd class="ml-2 px-1.5 py-0.5 rounded border border-[#30363d] text-[10px] font-semibold text-[#8b949e]">
+          /
+        </kbd>
+      </form>
+      <a class="text-sm font-normal text-white hover:underline" href="#">
+        Sign in
+      </a>
+      <a class="text-sm font-normal text-white border border-white rounded-md px-3 py-1 hover:bg-white hover:text-[#0D1117] transition"
+        href="#">
+        Sign up
+      </a>
+    </div>
+  </header>
+  <main class="text-center max-w-4xl mx-auto px-4 sm:px-6 md:px-10 py-12">
+    <h1 class="text-3xl sm:text-4xl font-semibold leading-tight max-w-3xl mx-auto">
+      From
+      <span class="font-normal">
+        startups to enterprises,
+      </span>
+      <span class="font-semibold text-gray-500">
+        GitHub scales
+      </span>
+      <br />
+      <span class="font-semibold text-gray-500">
+        with teams of any size in any industry
+      </span>
+      .
+    </h1>
+    <div class="inline-flex mt-8 border border-gray-600 rounded-full overflow-hidden text-xs font-normal text-white">
+      <button
+        class="bg-transparent border border-gray-600 rounded-full px-4 py-2 text-white hover:bg-[#30363d] focus:outline-none focus:ring-2 focus:ring-white">
+        By industry
+      </button>
+      <button class="px-4 py-2 hover:bg-[#30363d] focus:outline-none focus:ring-2 focus:ring-white">
+        By size
+      </button>
+      <button class="px-4 py-2 hover:bg-[#30363d] focus:outline-none focus:ring-2 focus:ring-white rounded-r-full">
+        By use case
       </button>
     </div>
-  </section>
-  <!-- Toggle buttons below the hero -->
-  <section class="bg-[#0d1117] py-8">
-    <div class="max-w-[720px] mx-auto px-4 flex justify-center space-x-3">
-      <button
-        class="text-[11px] text-white border border-[#30363d] rounded-full px-5 py-1 hover:bg-[#161b22] font-semibold"
-        type="button">
-        Code
-      </button>
-      <button
-        class="text-[11px] text-white border border-[#30363d] rounded-full px-5 py-1 hover:bg-[#161b22] font-semibold"
-        type="button">
-        Plan
-      </button>
-      <button
-        class="text-[11px] text-white border border-[#30363d] rounded-full px-5 py-1 hover:bg-[#161b22] font-semibold"
-        type="button">
-        Collaborate
-      </button>
-      <button
-        class="text-[11px] text-white border border-[#30363d] rounded-full px-5 py-1 hover:bg-[#161b22] font-semibold"
-        type="button">
-        Automate
-      </button>
-      <button class="text-[11px] text-white border border-[#8b949e] rounded-full px-5 py-1 bg-[#161b22] font-semibold"
-        type="button">
-        Secure
-      </button>
-    </div>
-    <p class="text-[9px] text-[#8b949e] text-center mt-3 max-w-[720px] mx-auto px-4">
-      Leverage tooling to detect, review, and fix vulnerabilities before they reach production.
-    </p>
-  </section>
-  <!-- Logos bar -->
-  <section class="bg-[#0d1117] border-t border-[#161b22] py-8">
-    <div class="max-w-[1280px] mx-auto px-4 flex items-center justify-between space-x-6 overflow-x-auto scrollbar-hide">
-      <img alt="Duolingo logo in gray" class="opacity-40 flex-shrink-0" height="24"
-        src="https://storage.googleapis.com/a1aa/image/9e206f46-fb38-4fa6-bb59-eb1cc068d3d3.jpg" width="80" />
-      <img alt="The New York Times logo in gray" class="opacity-40 flex-shrink-0" height="24"
-        src="https://storage.googleapis.com/a1aa/image/792ab843-d003-4aab-8f61-6fe09795f428.jpg" width="80" />
-      <img alt="Mercado Libre logo in gray" class="opacity-40 flex-shrink-0" height="24"
-        src="https://storage.googleapis.com/a1aa/image/6223de77-c6ff-4795-2139-e6718106c3ca.jpg" width="80" />
-      <img alt="American Airlines logo in white" class="flex-shrink-0" height="24"
-        src="https://storage.googleapis.com/a1aa/image/9ce91c3d-5475-4eb7-c996-c7513a0bbb81.jpg" width="80" />
-      <img alt="Ford logo in white oval" class="flex-shrink-0" height="24"
-        src="https://storage.googleapis.com/a1aa/image/e9913cd0-cbca-4756-4e0c-eea2f27e5a13.jpg" width="80" />
-      <img alt="Mercedes-Benz logo in gray" class="opacity-40 flex-shrink-0" height="24"
-        src="https://storage.googleapis.com/a1aa/image/8c922670-416a-4cee-512c-db1e61ae3b67.jpg" width="80" />
-      <img alt="Societe Generale logo in gray" class="opacity-40 flex-shrink-0" height="24"
-        src="https://storage.googleapis.com/a1aa/image/618e4cdf-ef4c-4202-7b88-4a88eca816e5.jpg" width="80" />
-      <img alt="Vodafone logo in gray" class="opacity-40 flex-shrink-0" height="24"
-        src="https://storage.googleapis.com/a1aa/image/b630f67c-d4db-437d-9777-4914c757ea6f.jpg" width="80" />
-      <img alt="PHILIPS logo in white bold" class="flex-shrink-0 font-bold" height="24"
-        src="https://storage.googleapis.com/a1aa/image/24e16797-ac56-4b4b-12e9-edb2e3483022.jpg" width="80" />
-      <img alt="SAP logo in white bold" class="flex-shrink-0" height="24"
-        src="https://storage.googleapis.com/a1aa/image/cb31a37e-8cb1-46e5-fd19-d2702036085a.jpg" width="80" />
-      <img alt="Infosys logo in gray" class="opacity-40 flex-shrink-0" height="24"
-        src="https://storage.googleapis.com/a1aa/image/00b1c84e-0cdd-4a33-0b64-00f4b0050918.jpg" width="80" />
-      <img alt="Spotify logo in gray" class="opacity-40 flex-shrink-0" height="24"
-        src="https://storage.googleapis.com/a1aa/image/5ec8d076-2c70-4932-fc0e-3e03fd5dbc21.jpg" width="80" />
-      <div aria-label="User initials MM"
-        class="flex-shrink-0 w-6 h-6 rounded-full bg-[#6e7681] text-[10px] font-semibold flex items-center justify-center">
-        MM
+  </main>
+  <section
+    class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 border-t border-b border-[#21262d] divide-x divide-[#21262d] text-left text-white">
+    <div class="p-8 flex flex-col justify-between">
+      <h2 class="text-lg font-semibold mb-12">
+        Figma
+      </h2>
+      <div>
+        <p class="text-xs text-gray-500 mb-1">
+          Technology
+        </p>
+        <p class="font-semibold text-white text-sm leading-snug max-w-[220px]">
+          Figma streamlines development and strengthens security
+        </p>
       </div>
     </div>
-  </section>
-  <!-- Bottom section with icon and text -->
-  <section class="bg-[#0d1117] py-20 px-4">
-    <div class="max-w-[720px] mx-auto text-center">
-      <img alt="Purple GitHub Copilot icon with eyes and headset" class="mx-auto mb-4" height="48"
-        src="https://storage.googleapis.com/a1aa/image/06a89efb-b215-4e3e-263b-b45d601ae157.jpg" width="48" />
-      <h2 class="text-white text-xl font-semibold mb-2">
-        Accelerate performance
-      </h2>
-      <p class="text-[#8b949e] text-sm max-w-[480px] mx-auto leading-relaxed">
-        With GitHub Copilot embedded throughout the platform, you can simplify your toolchain, automate tasks, and
-        improve the developer experience.
-      </p>
+    <div class="p-8 flex flex-col justify-between border-l border-[#21262d]">
+      <div class="flex items-center space-x-3 mb-12">
+        <img alt="Mercedes-Benz logo white on dark background" class="w-8 h-8" height="32"
+          src="https://storage.googleapis.com/a1aa/image/0d98b338-e60b-4310-7cfc-49075aefb9dc.jpg" width="32" />
+        <span class="text-white text-sm font-normal">
+          Mercedes-Benz
+        </span>
+      </div>
+      <div>
+        <p class="text-xs text-gray-500 mb-1">
+          Automotive
+        </p>
+        <p class="font-semibold text-white text-sm leading-snug max-w-[220px]">
+          Mercedes-Benz standardizes source code and automates onboarding
+        </p>
+      </div>
+    </div>
+    <div class="p-8 flex flex-col justify-between border-l border-[#21262d]">
+      <div class="flex items-center space-x-3 mb-12">
+        <img alt="Mercado Libre logo white on dark background" class="w-8 h-8" height="32"
+          src="https://storage.googleapis.com/a1aa/image/ea094a85-bab3-4979-6058-9b76f6a54b34.jpg" width="32" />
+        <span class="text-white text-sm font-normal">
+          mercado libre
+        </span>
+      </div>
+      <div>
+        <p class="text-xs text-gray-500 mb-1">
+          Financial services
+        </p>
+        <p class="font-semibold text-white text-sm leading-snug max-w-[220px]">
+          Mercado Libre cuts coding time by 50%
+        </p>
+      </div>
+    </div>
+    <div class="p-8 border-l border-[#21262d]">
     </div>
   </section>
+  <footer
+    class="max-w-7xl mx-auto flex justify-center items-center space-x-6 text-sm text-[#539bf5] border-t border-[#21262d] py-6">
+    <a class="flex items-center space-x-1 hover:underline" href="#">
+      <span>
+        Explore customer stories
+      </span>
+      <i class="fas fa-chevron-right text-xs">
+      </i>
+    </a>
+    <div class="border-l border-[#21262d] h-4">
+    </div>
+    <a class="flex items-center space-x-1 hover:underline" href="#">
+      <span>
+        View all solutions
+      </span>
+      <i class="fas fa-chevron-right text-xs">
+      </i>
+    </a>
+  </footer>
+  <button aria-label="Scroll to top"
+    class="fixed bottom-6 right-6 w-8 h-8 rounded-full bg-[#21262d] text-[#8b949e] hover:text-white flex items-center justify-center">
+    <i class="fas fa-arrow-up">
+    </i>
+  </button>
 </body>
 
 </html>

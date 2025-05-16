@@ -6,6 +6,7 @@ import Image from 'next/image';
 import Header from './components/Header';
 import Head from 'next/head';
 import TechSlider from './components/Slider/TechSlider';
+import ProjectShowcase from './components/ProjectWindow/Project';
 
 export default function Home() {
   useEffect(() => {
@@ -136,7 +137,10 @@ export default function Home() {
             ></iframe>
           </section>
         </div>
-
+        <section
+        className="relative pt-12 pb-20 px-4">
+        <ProjectShowcase/>
+        </section>
         <section
           className="relative flex justify-center items-center pt-12 pb-20 px-4"
           style={{
