@@ -1,15 +1,20 @@
 // app/page.tsx or pages/index.tsx
 
 'use client';
-import { useEffect, useMemo } from 'react';
+import { useEffect, useMemo, useState } from 'react';
 import Image from 'next/image';
 import Header from './components/Header';
 import Head from 'next/head';
 import TechSlider from './components/Slider/TechSlider';
 import ProjectShowcase from './components/ProjectWindow/Project';
+import LoadingScreen from './components/LoadingScreen/LoadingScreen';
 
 export default function Home() {
+
+  const [isLoading, setIsLoading] = useState(true);
+
   useEffect(() => {
+    
     const mascots = document.getElementById('mascots-container');
     const codeEditor = document.getElementById('code-editor-container');
 
@@ -36,6 +41,15 @@ export default function Home() {
     return () => window.removeEventListener('scroll', handleScroll);
   }, []);
 
+  useEffect(() => {
+    // Simulate delay for fade-out (you can also use window.onload or real data loading)
+    const timeout = setTimeout(() => {
+      setIsLoading(false);
+    }, 2000); // 1.5s to allow fade-out
+
+    return () => clearTimeout(timeout);
+  }, []);
+
   function getExperience(): string {
     const startDate = new Date("2022-12-05");
     const now = new Date();
@@ -52,7 +66,9 @@ export default function Home() {
   const experience = useMemo(() => getExperience(), []);
 
   return (
+    
     <>
+    <LoadingScreen visible={isLoading} />
       <Head>
         <title>GitHub Landing with Parallax Zoom and Scroll</title>
         <meta name="viewport" content="width=device-width, initial-scale=1" />

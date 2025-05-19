@@ -1,0 +1,77 @@
+/* styles/LoadingScreen.css */
+
+.loading-body {
+    position: fixed;
+    inset: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: black;
+    z-index: 9999;
+    opacity: 1;
+    transition: opacity 1s ease-in-out;
+    pointer-events: all;
+    overflow: hidden;
+}
+
+.fade-out {
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 1s ease-in-out;
+}
+
+.sky {
+    position: absolute;
+    width: 200vw;
+    height: 200vh;
+    background: radial-gradient(circle, #0b0c2a, #000000);
+    animation: rotateSky 60s linear infinite;
+    z-index: -2;
+}
+
+@keyframes rotateSky {
+    from {
+        transform: rotate(0deg) scale(1.2);
+    }
+    to {
+        transform: rotate(360deg) scale(1.2);
+    }
+}
+
+.stars {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("/purple-galaxy.jpg") no-repeat center center;
+    background-size: cover;
+    opacity: 0.3;
+    animation: rotateStars 100s linear infinite;
+}
+
+@keyframes rotateStars {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(-360deg);
+    }
+}
+
+.galaxy {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: url("/purple-galaxy.jpg") no-repeat center center;
+    background-size: contain;
+    opacity: 0.2;
+    animation: rotateGalaxy 120s linear infinite;
+}
+
+@keyframes rotateGalaxy {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

@@ -2,7 +2,7 @@ import HeaderActions from "./Social";
 
 export default function Header() {
     return (
-        <header className="bg-[#0B1033] sticky top-0 z-50 shadow-md backdrop-blur-sm">
+        <header className="bg-[#0B1033] sticky top-0 z-49 shadow-md backdrop-blur-sm">
             <nav className="max-w-[1280px] mx-auto flex items-center justify-between px-6 py-5">
                 <div className="flex items-center space-x-8">
                     <a href="#" className="flex items-center">

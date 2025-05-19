@@ -8,7 +8,6 @@ export default function ProjectShowcase() {
             <main className="text-center max-w-4xl mx-auto px-4 sm:px-6 md:px-10 py-12">
                 <h1 className="text-3xl sm:text-4xl font-semibold leading-tight max-w-3xl mx-auto">
                     Work Experience <span className="font-normal">Building Robust,</span>{' '}
-                    {/* <span className="font-semibold text-gray-500">building robust,</span> */}
                     <br />
                     <span className="font-semibold text-gray-500">
                         Scalable Software for Real-World needs
@@ -19,12 +18,6 @@ export default function ProjectShowcase() {
                     <button className="bg-transparent border border-gray-600 rounded-full px-4 py-2 text-white hover:bg-[#30363d] focus:outline-none focus:ring-2 focus:ring-white">
                         By industry
                     </button>
-                    {/* <button className="px-4 py-2 hover:bg-[#30363d] focus:outline-none focus:ring-2 focus:ring-white">
-                        By size
-                    </button>
-                    <button className="px-4 py-2 hover:bg-[#30363d] focus:outline-none focus:ring-2 focus:ring-white rounded-r-full">
-                        By use case
-                    </button> */}
                 </div>
             </main>
 
@@ -49,13 +42,14 @@ export default function ProjectShowcase() {
                         Fintech / Digital Payments
                         </p>
                     </div>
-                    {/* Optional: overlay to darken background for better contrast */}
                     <div className="absolute inset-0 bg-black/60 rounded-lg" />
                 </div>
 
-                <div className="p-8 flex flex-col justify-between border-l border-[#21262d] h-80">
+                <div
+                    className="p-8 flex flex-col justify-between border-l border-[#21262d] h-80 bg-[url('/cm4-project.png')] bg-cover bg-center relative"
+                >
                     <div className="flex items-center space-x-3 mb-12">
-                        <div className="relative w-16 h-16"> {/* Set size of Image container */}
+                        <div className="relative w-16 h-16"> 
                             <Image
                                 src="/StackfusionLogo.png"
                                 alt="Company logo"
@@ -66,15 +60,17 @@ export default function ProjectShowcase() {
                         <span className="text-sm font-semibold">Stackfusion Pvt Ltd</span>
                     </div>
                     <div>
-                        <p className="text-xs text-gray-500 mb-1">Industry</p>
+                        <p className="text-xs text-white-500 mb-1">Industry</p>
                         <p className="font-semibold text-white text-sm leading-snug max-w-[220px]">
-                            Some description here
+                            Edge Computing
                         </p>
                     </div>
                 </div>
-                <div className="p-8 flex flex-col justify-between border-l border-[#21262d] h-80">
+                <div
+                    className="p-8 flex flex-col justify-between border-l border-[#21262d] h-80 bg-[url('/cloud-infrastructure.png')] bg-cover bg-center relative"
+                >
                     <div className="flex items-center space-x-3 mb-12">
-                        <div className="relative w-16 h-16"> {/* Set size of Image container */}
+                        <div className="relative w-16 h-16"> 
                             <Image
                                 src="/StackfusionLogo.png"
                                 alt="Company logo"
@@ -85,15 +81,17 @@ export default function ProjectShowcase() {
                         <span className="text-sm font-semibold">Stackfusion Pvt Ltd</span>
                     </div>
                     <div>
-                        <p className="text-xs text-gray-500 mb-1">Industry</p>
+                        <p className="text-xs text-white-500 mb-1">Industry</p>
                         <p className="font-semibold text-white text-sm leading-snug max-w-[220px]">
-                            Some description here
+                            Cloud Infrasture
                         </p>
                     </div>
                 </div>
-                <div className="p-8 flex flex-col justify-between border-l border-[#21262d] h-80">
+                <div
+                    className="p-8 flex flex-col justify-between border-l border-[#21262d] h-80 bg-[url('/dashboard-project.png')] bg-cover bg-center relative"
+                >
                     <div className="flex items-center space-x-3 mb-12">
-                        <div className="relative w-16 h-16"> {/* Set size of Image container */}
+                        <div className="relative w-16 h-16"> 
                             <Image
                                 src="/StackfusionLogo.png"
                                 alt="Company logo"
@@ -101,12 +99,12 @@ export default function ProjectShowcase() {
                                 className="object-contain"
                             />
                         </div>
-                        <span className="text-sm font-semibold">Stackfusion Pvt Ltd</span>
+                        <span className="text-sm text-black font-semibold">Stackfusion Pvt Ltd</span>
                     </div>
                     <div>
-                        <p className="text-xs text-gray-500 mb-1">Industry</p>
+                        <p className="text-xs text-grey text-500 mb-1">Industry</p>
                         <p className="font-semibold text-white text-sm leading-snug max-w-[220px]">
-                            Some description here
+                            Smart Dashboards
                         </p>
                     </div>
                 </div>
