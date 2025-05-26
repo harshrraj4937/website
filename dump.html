@@ -1,133 +1,88 @@
-<!-- <!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Three Column Layout</title>
-  <style>
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-    }
-
-    .container {
-      display: flex;
-      height: 100vh;
-      width: 100vw;
-    }
-
-    .left-column {
-      width: 15%;
-      background-color: #f1f1f1;
-    }
-
-    .middle-column {
-      width: 70%;
-      background-color: #ffffff;
-    }
-
-    .right-column {
-      width: 15%;
-      background-color: #f1f1f1;
-    }
-  </style>
-</head>
-<body>
-  <div class="container">
-    <div class="left-column">Left</div>
-    <div class="middle-column">Middle</div>
-    <div class="right-column">Right</div>
-  </div>
-</body>
-</html> -->
-
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Custom Layout</title>
-  <style>
-    * {
-      box-sizing: border-box;
-    }
+  <head>
+    <title>Three.js WebGPU - Minimal 3D LUT Example</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      body {
+        margin: 0;
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <script type="importmap">
+      {
+        "imports": {
+          "three": "https://unpkg.com/three@0.165.0/build/three.module.js",
+          "three/webgpu": "https://unpkg.com/three@0.165.0/examples/jsm/renderers/webgpu/WebGPURenderer.js",
+          "three/addons/": "https://unpkg.com/three@0.165.0/examples/jsm/"
+        }
+      }
+    </script>
 
-    body, html {
-      margin: 0;
-      padding: 0;
-      height: 100%;
-      width: 100%;
-    }
+    <script type="module">
+      import * as THREE from 'three';
+      import { WebGPURenderer } from 'three/webgpu';
+      import { OrbitControls } from 'three/addons/controls/OrbitControls.js';
 
-    .div0 {
-      border: 2px solid black;
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      padding: 10px;
-    }
+      let camera, scene, renderer, controls;
 
-    .div1 {
-      width: 60%;
-      height: 40%;
-      background: #fff;
-      border: 2px solid black;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-size: 2rem;
-      font-weight: bold;
-      margin-bottom: 10px;
-    }
+      init();
 
-    .bottom-section {
-      display: flex;
-      width: 60%;
-      height: 50%;
-      gap: 10px;
-    }
+      function init() {
+        // Camera
+        camera = new THREE.PerspectiveCamera(
+          50,
+          window.innerWidth / window.innerHeight,
+          0.1,
+          100
+        );
+        camera.position.set(4, 2, 6);
 
-    .div2 {
-      flex: 1;
-      border: 2px solid black;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
+        // Scene
+        scene = new THREE.Scene();
+        scene.background = new THREE.Color(0x202020);
 
-    .right-column {
-      flex: 1;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
-    }
+        // Geometry + Material (placeholder smoke plane)
+        const geometry = new THREE.PlaneGeometry(2, 4, 16, 16);
+        const material = new THREE.MeshBasicMaterial({
+          color: 0xffffff,
+          wireframe: true,
+          side: THREE.DoubleSide,
+        });
 
-    .div3, .div4 {
-      flex: 1;
-      border: 2px solid black;
-      background: #fff;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      font-weight: bold;
-      font-size: 1.5rem;
-    }
-  </style>
-</head>
-<body>
-  <div class="div0">
-    div0
-    <div class="div1">div1</div>
-    <div class="bottom-section">
-      <div class="div2">div2</div>
-      <div class="right-column">
-        <div class="div3">div3</div>
-        <div class="div4">div4</div>
-      </div>
-    </div>
-  </div>
-</body>
+        const smoke = new THREE.Mesh(geometry, material);
+        smoke.rotation.x = -Math.PI / 2;
+        scene.add(smoke);
+
+        // Renderer (WebGPU)
+        renderer = new WebGPURenderer({ antialias: true });
+        renderer.setSize(window.innerWidth, window.innerHeight);
+        document.body.appendChild(renderer.domElement);
+
+        // Controls
+        controls = new OrbitControls(camera, renderer.domElement);
+        controls.enableDamping = true;
+
+        // Resize handler
+        window.addEventListener('resize', onWindowResize);
+
+        animate();
+      }
+
+      function onWindowResize() {
+        camera.aspect = window.innerWidth / window.innerHeight;
+        camera.updateProjectionMatrix();
+        renderer.setSize(window.innerWidth, window.innerHeight);
+      }
+
+      function animate() {
+        requestAnimationFrame(animate);
+        controls.update();
+        renderer.render(scene, camera);
+      }
+    </script>
+  </body>
 </html>

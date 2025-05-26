@@ -9,15 +9,15 @@ const WorkflowSection = () => {
                 {/* Left side */}
                 <div className="flex flex-col justify-center space-y-6 max-w-md z-10">
                     <div>
-                        <h2 className="text-white font-semibold text-lg leading-6 mb-1">Automate any workflow</h2>
+                        <h2 className="text-white font-semibold text-lg leading-6 mb-1">Stay in Sync With Your Spending.</h2>
                         <p className="text-[#8B949E] text-sm leading-5 mb-4">
-                            Optimize your process with simple and secured CI/CD.
+                            Simplify your budgeting with interactive graphs, smart breakdowns, and seamless tracking.
                         </p>
                         <a
-                            href="#"
+                            href="https://pay-day-digital.onrender.com"
                             className="text-[#539BF5] text-sm font-normal hover:underline inline-flex items-center space-x-1"
                         >
-                            <span>Discover GitHub Actions</span>
+                            <span>Try Money Monitor for free</span>
                             <i className="fas fa-chevron-right text-[#539BF5]" />
                         </a>
                     </div>

@@ -30,24 +30,21 @@ const MoneyMonitorCard = () => {
                     style={{ boxShadow: '0 0 20px #000000cc' }}
                     >
                     <div className="flex items-center space-x-2 mb-3 text-[11px] text-[#8b949e] font-semibold">
-                        <i className="fab fa-github" />
-                        <span>Hello-Rides - bike rental platform</span>
+                        <i className="fas fa-wallet" />
+                        <span>Money Monitor - Expense Tracker</span>
                         <span className="bg-[#a7f583] text-[#0e1114] rounded px-1.5 py-0.5 text-[9px] font-normal uppercase">
-                            Proto type
+                            Full Stack
                         </span>
-                    </div>
+                        </div>
 
-                    <p className="text-[11px] text-[#8b949e] mb-3 leading-tight">
-                        Hello-Rides is a full-stack bike rental platform that connects users looking to rent two-wheelers with
-                        owners wanting to list their vehicles online.
-                    </p>
+                        <p className="text-[11px] text-[#8b949e] mb-3 leading-tight">
+                        Money Monitor is a full-stack expense tracking app designed to help users log, categorize, and analyze their spending habits effortlessly.
+                        </p>
 
-                    <p className="text-[11px] text-[#8b949e] mb-3 leading-tight">
-                        It offers seamless features for discovering, booking, and managing bike rentals in real-time.{' '}
-                        <span className="font-semibold text-[#58a6ff]">
-                            Tech Stack Django-Go-PostgreSQL-Redis-Next.js-Docker
-                        </span>
-                    </p>
+                        <p className="text-[11px] text-[#8b949e] mb-3 leading-tight">
+                        It features real-time data updates, interactive visualizations, and category-wise analytics for smarter budgeting.
+                        <span className="font-semibold text-[#58a6ff]"> Tech Stack: MongoDB • Express • React • Node.js</span>
+                        </p>
 
                     <div className="bg-[#0d1117] rounded-md p-3 text-[11px] font-mono leading-snug text-[#8b949e]">
                         <div className="flex items-center space-x-2 mb-2">
@@ -59,40 +56,43 @@ const MoneyMonitorCard = () => {
                         </div>
                         <pre className="overflow-x-auto rounded-md bg-[#161b22] p-2">
                             <code>
-                                <span className="text-[#8b949e]">#City Routes</span>
+                                <span className="text-[#8b949e]"># Transaction Routes</span><br />
+                                <span className="text-[#8affbf]">const router = require(&apos;express&apos;).Router();</span><br />
+                                <span className="text-[#8affbf]">const moment = require(&apos;moment&apos;);</span><br />
+                                <span className="text-[#8affbf]">const transaction = require(&apos;../model/Transaction&apos;);</span><br />
                                 <br />
-                                <span className="text-[#8affbf]">
-                                    cityRepo := &amp;citycontroller.CityCrud&#123;DB: db&#125;
-                                </span>
+                                <span className="text-[#8b949e]"># Add Transaction</span><br />
+                                <span className="text-[#8affbf]">router.post(&apos;/add-transaction&apos;, async (req, res) =&gt; &#123;</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;try &#123;</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;&nbsp;&nbsp;const newTransaction = new transaction(req.body);</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;&nbsp;&nbsp;await newTransaction.save();</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;&nbsp;&nbsp;res.send(&apos;Transaction added successfully&apos;);</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;&#125; catch (error) &#123;</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;&nbsp;&nbsp;res.status(500).json(error);</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;&#125;</span><br />
+                                <span className="text-[#8affbf]">&#125;);</span><br />
                                 <br />
-                                <span className="text-[#8affbf]">
-                                    cityService := &amp;citycontroller.CityService&#123;Repo: cityRepo&#125;
-                                </span>
-                                <br />
-                                <span className="text-[#8affbf]">
-                                    cityHandler := &amp;citycontroller.CityHandler&#123;Service: cityService&#125;
-                                </span>
-                                <br />
-                                <br />
-                                <span className="text-[#8b949e]">#Initialize Gin Server</span>
-                                <br />
-                                <span className="text-[#8affbf]">s := server.NewServer()</span>
-                                <br />
-                                <br />
-                                <span className="text-[#8b949e]">#Register Routes</span>
-                                <br />
-                                <span className="text-[#8affbf]">
-                                    authcontroller.RegisterAuthRoutes(s.Engine, authHandler)
-                                </span>
-                                <br />
-                                <span className="text-[#8affbf]">
-                                    vehiclecontroller.RegisterVehicleRoutes(s.Engine, vehicleHandler)
-                                </span>
-                                <br />
-                                <span className="text-[#8affbf]">
-                                    citycontroller.RegisterCityRoutes(s.Engine, cityHandler)
-                                </span>
-                            </code>
+                                {/* <span className="text-[#8b949e]"># Edit Transaction</span><br />
+                                <span className="text-[#8affbf]">router.post(&apos;/edit-transaction&apos;, async (req, res) =&gt; &#123;</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;try &#123;</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;&nbsp;&nbsp;await transaction.findOneAndUpdate(&#123; _id: req.body.transactionId &#125;, req.body.payload);</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;&nbsp;&nbsp;res.send(&apos;Transaction updated successfully&apos;);</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;&#125; catch (error) &#123;</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;&nbsp;&nbsp;res.status(500).json(error);</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;&#125;</span><br />
+                                <span className="text-[#8affbf]">&#125;);</span><br />
+                                <br /> */}
+                                <span className="text-[#8b949e]"># Delete Transaction</span><br />
+                                <span className="text-[#8affbf]">router.post(&apos;/delete-transaction&apos;, async (req, res) =&gt; &#123;</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;try &#123;</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;&nbsp;&nbsp;await transaction.findOneAndDelete(&#123; _id: req.body.transactionId &#125;);</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;&nbsp;&nbsp;res.send(&apos;Transaction deleted successfully&apos;);</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;&#125; catch (error) &#123;</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;&nbsp;&nbsp;res.status(500).json(error);</span><br />
+                                <span className="text-[#8affbf]">&nbsp;&nbsp;&#125;</span><br />
+                                <span className="text-[#8affbf]">&#125;);</span>
+                                </code>
+
                         </pre>
                     </div>
                 </div>

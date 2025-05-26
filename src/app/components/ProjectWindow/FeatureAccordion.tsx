@@ -6,15 +6,15 @@ const FeatureAccordion = () => {
         {
             title: 'Get up and running in seconds',
             icons: [
-                { src: '/croped-wheel.png', label: 'Fast Start' },
-                { src: '/croped-wheel.png', label: 'Auto Deploy' },
+                { src: '/reactjslogo.png', label: 'Fast Start' },
+                { src: '/awslogo.png', label: 'Auto Deploy' },
             ],
         },
         {
             title: 'Build on the go',
             icons: [
-                { src: '/croped-wheel.png', label: 'Mobile Dev' },
-                { src: '/croped-wheel.png', label: 'Cloud Sync' },
+                { src: '/javascriptlogo.png', label: 'Javascript' },
+                { src: '/mongodblogo.png', label: 'Cloud Sync' },
             ],
         },
         {
