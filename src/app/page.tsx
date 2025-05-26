@@ -8,9 +8,9 @@ import Head from 'next/head';
 import TechSlider from './components/Slider/TechSlider';
 import ProjectShowcase from './components/ProjectWindow/Project';
 import LoadingScreen from './components/LoadingScreen/LoadingScreen';
-import ProjectLayout from './components/ProjectWindow/ProjectLayout';
 import HelloRidesCard from './components/ProjectWindow/ProjectCard';
 import WorkflowSection from './components/ProjectWindow/Workflow';
+import MoneyMonitorCard from './components/ProjectWindow/MoneyMonitorCard';
 
 export default function Home() {
 
@@ -162,7 +162,8 @@ export default function Home() {
         </section>
         <HelloRidesCard/>
         <WorkflowSection/>
-        {/* <ProjectLayout/> */}
+        <MoneyMonitorCard/>
+        <WorkflowSection/>
         <section>
           <div>
             <TechSlider />
