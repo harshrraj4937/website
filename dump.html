@@ -1,203 +1,133 @@
+<!-- <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <meta charset="utf-8" />
-  <meta content="width=device-width, initial-scale=1" name="viewport" />
-  <title>
-    GitHub Scales
-  </title>
-  <script src="https://cdn.tailwindcss.com">
-  </script>
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&amp;display=swap" rel="stylesheet" />
+  <meta charset="UTF-8">
+  <title>Three Column Layout</title>
   <style>
-    body {
-      font-family: 'Inter', sans-serif;
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+    }
+
+    .container {
+      display: flex;
+      height: 100vh;
+      width: 100vw;
+    }
+
+    .left-column {
+      width: 15%;
+      background-color: #f1f1f1;
+    }
+
+    .middle-column {
+      width: 70%;
+      background-color: #ffffff;
+    }
+
+    .right-column {
+      width: 15%;
+      background-color: #f1f1f1;
     }
   </style>
 </head>
-
-<body class="bg-[#0D1117] text-white">
-  <header class="flex items-center justify-between px-4 sm:px-6 md:px-10 py-3 border-b border-[#30363d]">
-    <div class="flex items-center space-x-6">
-      <a class="text-white" href="#">
-        <i class="fab fa-github fa-lg">
-        </i>
-      </a>
-      <nav class="hidden md:flex space-x-6 text-sm font-normal text-white">
-        <div class="relative group">
-          <button class="flex items-center space-x-1">
-            <span>
-              Product
-            </span>
-            <i class="fas fa-caret-down text-xs">
-            </i>
-          </button>
-        </div>
-        <div class="relative group">
-          <button class="flex items-center space-x-1">
-            <span>
-              Solutions
-            </span>
-            <i class="fas fa-caret-down text-xs">
-            </i>
-          </button>
-        </div>
-        <div class="relative group">
-          <button class="flex items-center space-x-1">
-            <span>
-              Resources
-            </span>
-            <i class="fas fa-caret-down text-xs">
-            </i>
-          </button>
-        </div>
-        <div class="relative group">
-          <button class="flex items-center space-x-1">
-            <span>
-              Open Source
-            </span>
-            <i class="fas fa-caret-down text-xs">
-            </i>
-          </button>
-        </div>
-        <div class="relative group">
-          <button class="flex items-center space-x-1">
-            <span>
-              Enterprise
-            </span>
-            <i class="fas fa-caret-down text-xs">
-            </i>
-          </button>
-        </div>
-        <a class="hover:underline" href="#">
-          Pricing
-        </a>
-      </nav>
-    </div>
-    <div class="flex items-center space-x-4">
-      <form class="hidden md:flex items-center bg-[#161b22] rounded-md px-2 py-1 text-[#8b949e] text-xs w-[220px]">
-        <i class="fas fa-search mr-2">
-        </i>
-        <input aria-label="Search or jump to" class="bg-transparent outline-none w-full placeholder:text-[#8b949e]"
-          placeholder="Search or jump to..." type="search" />
-        <kbd class="ml-2 px-1.5 py-0.5 rounded border border-[#30363d] text-[10px] font-semibold text-[#8b949e]">
-          /
-        </kbd>
-      </form>
-      <a class="text-sm font-normal text-white hover:underline" href="#">
-        Sign in
-      </a>
-      <a class="text-sm font-normal text-white border border-white rounded-md px-3 py-1 hover:bg-white hover:text-[#0D1117] transition"
-        href="#">
-        Sign up
-      </a>
-    </div>
-  </header>
-  <main class="text-center max-w-4xl mx-auto px-4 sm:px-6 md:px-10 py-12">
-    <h1 class="text-3xl sm:text-4xl font-semibold leading-tight max-w-3xl mx-auto">
-      From
-      <span class="font-normal">
-        startups to enterprises,
-      </span>
-      <span class="font-semibold text-gray-500">
-        GitHub scales
-      </span>
-      <br />
-      <span class="font-semibold text-gray-500">
-        with teams of any size in any industry
-      </span>
-      .
-    </h1>
-    <div class="inline-flex mt-8 border border-gray-600 rounded-full overflow-hidden text-xs font-normal text-white">
-      <button
-        class="bg-transparent border border-gray-600 rounded-full px-4 py-2 text-white hover:bg-[#30363d] focus:outline-none focus:ring-2 focus:ring-white">
-        By industry
-      </button>
-      <button class="px-4 py-2 hover:bg-[#30363d] focus:outline-none focus:ring-2 focus:ring-white">
-        By size
-      </button>
-      <button class="px-4 py-2 hover:bg-[#30363d] focus:outline-none focus:ring-2 focus:ring-white rounded-r-full">
-        By use case
-      </button>
-    </div>
-  </main>
-  <section
-    class="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 border-t border-b border-[#21262d] divide-x divide-[#21262d] text-left text-white">
-    <div class="p-8 flex flex-col justify-between">
-      <h2 class="text-lg font-semibold mb-12">
-        Figma
-      </h2>
-      <div>
-        <p class="text-xs text-gray-500 mb-1">
-          Technology
-        </p>
-        <p class="font-semibold text-white text-sm leading-snug max-w-[220px]">
-          Figma streamlines development and strengthens security
-        </p>
-      </div>
-    </div>
-    <div class="p-8 flex flex-col justify-between border-l border-[#21262d]">
-      <div class="flex items-center space-x-3 mb-12">
-        <img alt="Mercedes-Benz logo white on dark background" class="w-8 h-8" height="32"
-          src="https://storage.googleapis.com/a1aa/image/0d98b338-e60b-4310-7cfc-49075aefb9dc.jpg" width="32" />
-        <span class="text-white text-sm font-normal">
-          Mercedes-Benz
-        </span>
-      </div>
-      <div>
-        <p class="text-xs text-gray-500 mb-1">
-          Automotive
-        </p>
-        <p class="font-semibold text-white text-sm leading-snug max-w-[220px]">
-          Mercedes-Benz standardizes source code and automates onboarding
-        </p>
-      </div>
-    </div>
-    <div class="p-8 flex flex-col justify-between border-l border-[#21262d]">
-      <div class="flex items-center space-x-3 mb-12">
-        <img alt="Mercado Libre logo white on dark background" class="w-8 h-8" height="32"
-          src="https://storage.googleapis.com/a1aa/image/ea094a85-bab3-4979-6058-9b76f6a54b34.jpg" width="32" />
-        <span class="text-white text-sm font-normal">
-          mercado libre
-        </span>
-      </div>
-      <div>
-        <p class="text-xs text-gray-500 mb-1">
-          Financial services
-        </p>
-        <p class="font-semibold text-white text-sm leading-snug max-w-[220px]">
-          Mercado Libre cuts coding time by 50%
-        </p>
-      </div>
-    </div>
-    <div class="p-8 border-l border-[#21262d]">
-    </div>
-  </section>
-  <footer
-    class="max-w-7xl mx-auto flex justify-center items-center space-x-6 text-sm text-[#539bf5] border-t border-[#21262d] py-6">
-    <a class="flex items-center space-x-1 hover:underline" href="#">
-      <span>
-        Explore customer stories
-      </span>
-      <i class="fas fa-chevron-right text-xs">
-      </i>
-    </a>
-    <div class="border-l border-[#21262d] h-4">
-    </div>
-    <a class="flex items-center space-x-1 hover:underline" href="#">
-      <span>
-        View all solutions
-      </span>
-      <i class="fas fa-chevron-right text-xs">
-      </i>
-    </a>
-  </footer>
-  <button aria-label="Scroll to top"
-    class="fixed bottom-6 right-6 w-8 h-8 rounded-full bg-[#21262d] text-[#8b949e] hover:text-white flex items-center justify-center">
-    <i class="fas fa-arrow-up">
-    </i>
-  </button>
+<body>
+  <div class="container">
+    <div class="left-column">Left</div>
+    <div class="middle-column">Middle</div>
+    <div class="right-column">Right</div>
+  </div>
 </body>
+</html> -->
 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Custom Layout</title>
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body, html {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+    }
+
+    .div0 {
+      border: 2px solid black;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 10px;
+    }
+
+    .div1 {
+      width: 60%;
+      height: 40%;
+      background: #fff;
+      border: 2px solid black;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-size: 2rem;
+      font-weight: bold;
+      margin-bottom: 10px;
+    }
+
+    .bottom-section {
+      display: flex;
+      width: 60%;
+      height: 50%;
+      gap: 10px;
+    }
+
+    .div2 {
+      flex: 1;
+      border: 2px solid black;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+
+    .right-column {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+
+    .div3, .div4 {
+      flex: 1;
+      border: 2px solid black;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-weight: bold;
+      font-size: 1.5rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="div0">
+    div0
+    <div class="div1">div1</div>
+    <div class="bottom-section">
+      <div class="div2">div2</div>
+      <div class="right-column">
+        <div class="div3">div3</div>
+        <div class="div4">div4</div>
+      </div>
+    </div>
+  </div>
+</body>
 </html>

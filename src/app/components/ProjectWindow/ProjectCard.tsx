@@ -1,6 +1,9 @@
 import Image from 'next/image';
+import { useState } from 'react';
 
 const HelloRidesCard = () => {
+    const [visible, setVisible] = useState(true);
+    
     return (
         <section
             className="relative flex justify-center items-center pt-12 pb-20 px-4"
@@ -21,9 +24,11 @@ const HelloRidesCard = () => {
                 />
 
                 <div
-                    className="absolute top-1/2 -right-5 -translate-y-1/2 rounded-lg bg-[#161b22] p-4 max-w-[360px] w-full shadow-lg"
+                    className={`absolute top-1/2 -right-5 -translate-y-1/2 rounded-lg bg-[#161b22] p-4 max-w-[360px] w-full shadow-lg transition-opacity duration-700 ease-in-out ${
+                        visible ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
+                    }`}
                     style={{ boxShadow: '0 0 20px #000000cc' }}
-                >
+                    >
                     <div className="flex items-center space-x-2 mb-3 text-[11px] text-[#8b949e] font-semibold">
                         <i className="fab fa-github" />
                         <span>Hello-Rides - bike rental platform</span>
@@ -93,13 +98,15 @@ const HelloRidesCard = () => {
                 </div>
 
                 <button
-                    aria-label="Play"
-                    className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-[#30363d] hover:bg-[#484f58] flex items-center justify-center text-[#8b949e] text-xs"
-                >        
-                ▶️
+                    aria-label="Toggle"
+                    onClick={() => setVisible((prev) => !prev)}
+                    className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-[#30363d] hover:bg-[#484f58] flex items-center justify-center text-[#8b949e]"
+                    >
+                    <svg xmlns="http://www.w3.org/2000/svg" className="w-5 h-5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 9l3 3-3 3m5-6h3m2 6a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2h14z" />
+                    </svg>
 
-                    {/* <i className="fas fa-play" /> */}
-                </button>
+            </button>
             </div>
         </section>
     );

@@ -37,7 +37,20 @@ const TechSlider = () => {
                 ))}
             </div>
             <button className="play-pause" onClick={togglePause}>
-                {isPaused ? "▶️" : "⏸️"}
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="currentColor"
+                    viewBox="0 0 24 24"
+                    className="w-4 h-4"
+                    >
+                    {isPaused ? (
+                        // Pause icon
+                        <path d="M6 4h4v16H6zm8 0h4v16h-4z" />
+                    ) : (
+                        // Play icon
+                        <path d="M5 3v18l15-9L5 3z" />
+                    )}
+                    </svg>
             </button>
         </div>
     );
