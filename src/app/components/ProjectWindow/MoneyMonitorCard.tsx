@@ -1,6 +1,6 @@
 import Image from 'next/image';
 
-const HelloRidesCard = () => {
+const MoneyMonitorCard = () => {
     return (
         <section
             className="relative flex justify-center items-center pt-12 pb-20 px-4"
@@ -13,8 +13,8 @@ const HelloRidesCard = () => {
                 style={{ backdropFilter: 'blur(10px)' }}
             >
                 <Image
-                    src="/hello-rides-project-card.png"
-                    alt="Dark themed graph chart"
+                    src="/money-monitor.png"
+                    alt="money-monitor hero"
                     className="rounded-lg shadow-lg"
                     width={600}
                     height={280}
@@ -95,9 +95,7 @@ const HelloRidesCard = () => {
                 <button
                     aria-label="Play"
                     className="absolute bottom-4 right-4 w-8 h-8 rounded-full bg-[#30363d] hover:bg-[#484f58] flex items-center justify-center text-[#8b949e] text-xs"
-                >        
-                ▶️
-
+                >                ▶️
                     {/* <i className="fas fa-play" /> */}
                 </button>
             </div>
@@ -105,4 +103,4 @@ const HelloRidesCard = () => {
     );
 };
 
-export default HelloRidesCard;
+export default MoneyMonitorCard;

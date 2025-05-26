@@ -1,9 +1,10 @@
 import React from "react";
+import FeatureAccordion from "./FeatureAccordion";
 // import "@fortawesome/fontawesome-free/css/all.min.css";
 
 const WorkflowSection = () => {
     return (
-        <div className="bg-[#0D1117] text-[#8B949E] min-h-screen flex items-center justify-center p-6 relative font-[Inter]">
+        <div className="bg-[#0D1117] text-[#8B949E] flex items-center justify-center p-6 relative font-[Inter]">
             <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 relative">
                 {/* Left side */}
                 <div className="flex flex-col justify-center space-y-6 max-w-md z-10">
@@ -20,27 +21,8 @@ const WorkflowSection = () => {
                             <i className="fas fa-chevron-right text-[#539BF5]" />
                         </a>
                     </div>
-
-                    <div className="border-t border-[#30363D] pt-6 space-y-6">
-                        {["Get up and running in seconds", "Build on the go", "Integrate the tools you love"].map(
-                            (title, index) => (
-                                <div
-                                    key={index}
-                                    className="flex justify-between items-center border-b border-[#30363D] pb-3"
-                                >
-                                    <h3 className="text-[#8B949E] font-semibold text-lg leading-6">{title}</h3>
-                                    <button
-                                        aria-label="Expand"
-                                        className="text-[#8A63E6] text-xl font-bold leading-none"
-                                    >
-                                        +
-                                    </button>
-                                </div>
-                            )
-                        )}
-                    </div>
+                    <FeatureAccordion/>
                 </div>
-
                 {/* Vertical mid line */}
                 <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-px bg-[#30363D] translate-x-[-50%] z-0"></div>
 
