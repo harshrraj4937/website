@@ -161,7 +161,6 @@ export default function Home() {
         <ProjectShowcase/>
         </section>
         <HelloRidesCard/>
-        <WorkflowSection/>
         <MoneyMonitorCard/>
         <WorkflowSection/>
         <section>

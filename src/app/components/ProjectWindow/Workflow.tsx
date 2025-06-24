@@ -21,7 +21,7 @@ const WorkflowSection = () => {
                             <i className="fas fa-chevron-right text-[#539BF5]" />
                         </a>
                     </div>
-                    <FeatureAccordion/>
+                    <FeatureAccordion />
                 </div>
                 {/* Vertical mid line */}
                 <div className="hidden md:block absolute top-0 bottom-0 left-1/2 w-px bg-[#30363D] translate-x-[-50%] z-0"></div>
@@ -39,52 +39,76 @@ const WorkflowSection = () => {
                     ></div>
                     <div className="relative bg-[#161B22] rounded-xl p-6 text-[#8B949E] text-xs font-normal leading-5 space-y-4">
                         <div className="flex justify-between items-center text-[#8B949E] font-semibold text-sm mb-2">
-                            <span>45,167 workflow runs</span>
-                            <div className="flex space-x-6">
+                            <span>Currently Active 4 workflow runs</span>
+                            {/* <div className="flex space-x-6">
                                 {["Event", "Status", "Branch", "Actor"].map((label, index) => (
                                     <button key={index} className="flex items-center space-x-1 hover:text-white">
                                         <span>{label}</span>
                                         <i className="fas fa-chevron-down text-xs" />
                                     </button>
                                 ))}
-                            </div>
+                            </div> */}
                         </div>
 
                         {/* Workflow items */}
                         <div className="space-y-4">
                             {[
-                                "Fix IE12 incompatibilities",
-                                "Accessibility tests",
-                                "Update changelog and release notes",
-                                "Migrate to latest Storybook",
-                                "Fix IE11 incompatibilities",
-                            ].map((title, index) => (
+                                {
+                                    title: "Cloud HA PostgreSQL Clusters",
+                                    description:
+                                        "Provisioned with Terraform & Ansible on AWS, configured master-slave HA and Percona monitoring.",
+                                    timeAgo: "14 hour ago",
+                                    duration: "4m 12s",
+                                },
+                                {
+                                    title: "Edge RTSP Video Streaming",
+                                    description:
+                                        "Deployed RTSP streaming via GStreamer on Raspberry Pi edge nodes, with secure MQTT pipelines.",
+                                    timeAgo: "24 days ago",
+                                    duration: "6m 05s",
+                                },
+                                {
+                                    title: "Cloud-Native Monitoring Dashboard",
+                                    description:
+                                        "Prometheus + Grafana integration with Helm for Kubernetes metrics, 99.9% uptime achieved.",
+                                    timeAgo: "16 hour ago",
+                                    duration: "3m 45s",
+                                },
+                                {
+                                    title: "Vehicle Rental Microservices",
+                                    description:
+                                        "Full-stack deployment on AWS with Kubernetes & Redis, auto-scaled using GitHub Actions pipeline.",
+                                    timeAgo: "88 days ago",
+                                    duration: "5m 58s",
+                                },
+                            ].map((item, index) => (
                                 <div
                                     key={index}
                                     className="flex justify-between items-start space-x-4"
                                 >
                                     <div className="flex-1">
                                         <div className="flex items-center space-x-2 text-[#3FB950] font-semibold text-sm mb-1">
-                                            {index < 2 ? <i className="fas fa-check-circle" /> : null}
-                                            <span>{title}</span>
+                                            {/* {index < 2 ? <i className="fas fa-check-circle" /> : null} */}
+                                            <span>{item.title}</span>
                                         </div>
                                         <p className="text-[#8B949E] text-xs leading-4">
-                                            Build, test and deploy #15078: pull request #239122 synchronize by mona
+                                            {item.description}
                                         </p>
                                     </div>
                                     <div className="flex flex-col items-end space-y-1 text-[#8B949E] text-xs">
                                         <div className="flex items-center space-x-1">
                                             <i className="far fa-calendar-alt" />
-                                            <span>1 hour ago</span>
+                                            <span>{item.timeAgo}</span>
                                         </div>
                                         <div className="flex items-center space-x-1">
                                             <i className="far fa-clock" />
-                                            <span>5m 40s</span>
+                                            <span>{item.duration}</span>
                                         </div>
                                     </div>
                                 </div>
                             ))}
                         </div>
+
                     </div>
                 </div>
             </div>

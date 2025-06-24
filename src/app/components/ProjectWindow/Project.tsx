@@ -1,8 +1,38 @@
 'use client';
-
-import Image from 'next/image';
+import { WorkProjectCard } from './WorkProject';
 
 export default function ProjectShowcase() {
+    const projects = [
+        {
+            title: 'Fastag Gateway',
+            company: 'Stackfusion Pvt Ltd',
+            industry: 'Fintech / Digital Payments',
+            imageUrl: '/fastag-project.png',
+            logoUrl: '/StackfusionLogo.png',
+        },
+        {
+            title: 'CM4 Edge Device',
+            company: 'Stackfusion Pvt Ltd',
+            industry: 'Edge Computing',
+            imageUrl: '/cm4-project.png',
+            logoUrl: '/StackfusionLogo.png',
+        },
+        {
+            title: 'Cloud Infra',
+            company: 'Stackfusion Pvt Ltd',
+            industry: 'Cloud Infrastructure',
+            imageUrl: '/cloud-infrastructure.png',
+            logoUrl: '/StackfusionLogo.png',
+        },
+        {
+            title: 'Smart Dashboard',
+            company: 'Stackfusion Pvt Ltd',
+            industry: 'Smart Dashboards',
+            imageUrl: '/dashboard-project.png',
+            logoUrl: '/StackfusionLogo.png',
+            logoTextColor: 'text-black',
+        },
+    ]
     return (
         <>
             <main className="text-center max-w-4xl mx-auto px-4 sm:px-6 md:px-10 py-12">
@@ -21,93 +51,10 @@ export default function ProjectShowcase() {
                 </div>
             </main>
 
-            <section className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 border-t border-b border-[#21262d] divide-x divide-[#21262d] text-left text-white">
-                <div
-                    className="p-8 flex flex-col justify-between border-l border-[#21262d] h-80 bg-[url('/fastag-project.png')] bg-cover bg-center relative"
-                >
-                    <div className="flex items-center space-x-3 mb-12 z-10">
-                        <div className="relative w-16 h-16">
-                            <Image
-                                src="/StackfusionLogo.png"
-                                alt="Company logo"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                        <span className="text-sm font-semibold text-white">Stackfusion Pvt Ltd</span>
-                    </div>
-                    <div className="z-10">
-                        <p className="text-xs text-gray-300 mb-1">Industry</p>
-                        <p className="font-semibold text-white text-sm leading-snug max-w-[220px]">
-                        Fintech / Digital Payments
-                        </p>
-                    </div>
-                    <div className="absolute inset-0 bg-black/60 rounded-lg" />
-                </div>
-
-                <div
-                    className="p-8 flex flex-col justify-between border-l border-[#21262d] h-80 bg-[url('/cm4-project.png')] bg-cover bg-center relative"
-                >
-                    <div className="flex items-center space-x-3 mb-12">
-                        <div className="relative w-16 h-16"> 
-                            <Image
-                                src="/StackfusionLogo.png"
-                                alt="Company logo"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                        <span className="text-sm font-semibold">Stackfusion Pvt Ltd</span>
-                    </div>
-                    <div>
-                        <p className="text-xs text-white-500 mb-1">Industry</p>
-                        <p className="font-semibold text-white text-sm leading-snug max-w-[220px]">
-                            Edge Computing
-                        </p>
-                    </div>
-                </div>
-                <div
-                    className="p-8 flex flex-col justify-between border-l border-[#21262d] h-80 bg-[url('/cloud-infrastructure.png')] bg-cover bg-center relative"
-                >
-                    <div className="flex items-center space-x-3 mb-12">
-                        <div className="relative w-16 h-16"> 
-                            <Image
-                                src="/StackfusionLogo.png"
-                                alt="Company logo"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                        <span className="text-sm font-semibold">Stackfusion Pvt Ltd</span>
-                    </div>
-                    <div>
-                        <p className="text-xs text-white-500 mb-1">Industry</p>
-                        <p className="font-semibold text-white text-sm leading-snug max-w-[220px]">
-                            Cloud Infrasture
-                        </p>
-                    </div>
-                </div>
-                <div
-                    className="p-8 flex flex-col justify-between border-l border-[#21262d] h-80 bg-[url('/dashboard-project.png')] bg-cover bg-center relative"
-                >
-                    <div className="flex items-center space-x-3 mb-12">
-                        <div className="relative w-16 h-16"> 
-                            <Image
-                                src="/StackfusionLogo.png"
-                                alt="Company logo"
-                                fill
-                                className="object-contain"
-                            />
-                        </div>
-                        <span className="text-sm text-black font-semibold">Stackfusion Pvt Ltd</span>
-                    </div>
-                    <div>
-                        <p className="text-xs text-grey text-500 mb-1">Industry</p>
-                        <p className="font-semibold text-white text-sm leading-snug max-w-[220px]">
-                            Smart Dashboards
-                        </p>
-                    </div>
-                </div>
+            <section className="max-w-7xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-6 py-8 px-4 text-left text-white">
+                {projects.map((project, index) => (
+                    <WorkProjectCard key={index} {...project} delay={index * 0.15}/>
+                ))}
             </section>
 
 
