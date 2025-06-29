@@ -11,6 +11,7 @@ import LoadingScreen from './components/LoadingScreen/LoadingScreen';
 import HelloRidesCard from './components/ProjectWindow/ProjectCard';
 import WorkflowSection from './components/ProjectWindow/Workflow';
 import MoneyMonitorCard from './components/ProjectWindow/MoneyMonitorCard';
+import FalconViewer from './components/Falcon/FalconViewer';
 
 export default function Home() {
 
@@ -83,6 +84,7 @@ export default function Home() {
 
       <main className="bg-gradient-to-b from-[#0B1033] to-[#1A1F3D] text-white min-h-screen font-inter">
         <Header />
+        <FalconViewer/>
 
         <section className="max-w-[1280px] mx-auto px-4 mt-20 text-center">
           <h1 className="text-4xl sm:text-5xl md:text-6xl font-extrabold leading-tight max-w-4xl mx-auto text-white">
