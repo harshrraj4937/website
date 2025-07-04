@@ -4,7 +4,7 @@ import FeatureAccordion from "./FeatureAccordion";
 
 const WorkflowSection = () => {
     return (
-        <div className="bg-[#0D1117] text-[#8B949E] flex items-center justify-center p-6 relative font-[Inter]">
+        <div className="bg-[#0A0000]/80 backdrop-blur-sm text-[#8B949E] flex items-center justify-center p-6 relative font-[Inter]">
             <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 relative">
                 {/* Left side */}
                 <div className="flex flex-col justify-center space-y-6 max-w-md z-10">
@@ -30,14 +30,15 @@ const WorkflowSection = () => {
                 <div
                     className="relative rounded-xl p-6 z-10"
                     style={{
-                        background: "radial-gradient(ellipse at center, #6B5BFF33 0%, #1E293B 80%)",
+                        background: "radial-gradient(ellipse at center, rgba(10, 0, 0, 0.9) 0%, rgba(10, 0, 0, 0.6) 80%)"
                     }}
                 >
                     <div
                         className="absolute inset-0 rounded-xl pointer-events-none"
-                        style={{ boxShadow: "0 0 20px 8px #6B5BFF99" }}
+                        style={{ boxShadow: "0 0 20px 8px rgba(0, 0, 0, 0.4)" }} // blackish glow instead of blue
                     ></div>
-                    <div className="relative bg-[#161B22] rounded-xl p-6 text-[#8B949E] text-xs font-normal leading-5 space-y-4">
+
+                    <div className="relative bg-[#0A0000]/80 backdrop-blur-sm rounded-xl p-6 text-[#8B949E] text-xs font-normal leading-5 space-y-4">
                         <div className="flex justify-between items-center text-[#8B949E] font-semibold text-sm mb-2">
                             <span>Currently Active 4 workflow runs</span>
                             {/* <div className="flex space-x-6">

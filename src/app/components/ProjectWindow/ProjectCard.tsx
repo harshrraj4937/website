@@ -8,7 +8,7 @@ const HelloRidesCard = () => {
         <section
             className="relative flex justify-center items-center pt-12 pb-20 px-4"
             style={{
-                background: 'linear-gradient(180deg, #1c1f2a 0%, #7f7de6 40%, #3a6a8a 80%)',
+                background: 'linear-gradient(180deg, rgba(2, 0, 36, 1) 0%, rgba(0, 200, 255, 1) 100%)',
             }}
         >
             <div
